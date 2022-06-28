@@ -1,0 +1,33 @@
+.card-list__item {
+  background-color: #ffffff;
+}
+
+.card-list__title-text {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card-list__title {
+  @include font(500, 16px, 1.19, 0.09em, null);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.card-list__item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-list__text {
+  @include font(null, null, 1.19, 0.03em, var(--second-text-color));
+  text-align: center;
+}
