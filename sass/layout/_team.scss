@@ -2,8 +2,12 @@
   background-color: #f5f4fa;
   max-width: 1600px;
   margin: 0 auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 95px;
+    padding-bottom: 45px;
+  }
 }
 
 .team__title {

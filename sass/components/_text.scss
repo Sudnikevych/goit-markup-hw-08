@@ -1,5 +1,5 @@
 .text {
-  @include font(null, 14px, 1.71, 0.03em);
+  @include font(null, 14px, 1.71, 0.03em, null);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

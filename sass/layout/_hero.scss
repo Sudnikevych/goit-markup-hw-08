@@ -14,7 +14,7 @@
   padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
   @include font(900, 44px, 1.36, 0.06em, var(--third-text-color));
   text-align: center;
   text-transform: uppercase;
@@ -22,9 +22,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  @media screen and (max-width: 1200px) {
+    @include font(900, 26px, 1.62, 0.06em, var(--third-text-color));
+    width: 360px;
+  }
 }
 
-.hero-btn {
+.hero__btn {
   display: block;
   font-family: inherit;
   @include font(700, 16px, 1.88, 0.06em, var(--third-text-color));
