@@ -1,21 +1,47 @@
 .footer {
   background-color: #2f303a;
-  max-width: 1600px;
+  max-width: 480px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  .container {
-    display: flex;
-    align-items: baseline;
+
+  @include tablet {
+    max-width: 768px;
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  @include desktop {
+    max-width: 1600px;
+
+    .container {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }
 
 .footer-contacts {
-  margin-right: 70px;
+  // border: 1px solid red;
+  text-align: center;
+  @include tablet {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    text-align: left;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .footer-logo {
   color: #ffffff;
+  padding-bottom: 20px;
+  margin: 0 auto;
 }
 
 .footer-address {
@@ -46,10 +72,28 @@
   @include font(null, 14px, 1.14, 0.03em, var(--third-text-color));
   text-transform: uppercase;
   margin-bottom: 20px;
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.footer-icons {
+  // border: 1px solid red;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 35px;
+  }
 }
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
 }
 
 .footer-social-item {

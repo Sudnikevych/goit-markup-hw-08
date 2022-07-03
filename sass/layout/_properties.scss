@@ -1,7 +1,7 @@
 .properties {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 95px;
     padding-bottom: 45px;
   }
@@ -44,10 +44,10 @@
   &:nth-child(4)::before {
     background-image: url(../images/astronaut4.svg);
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 30px) / 2);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc((100% - 90px) / 4);
   }
 }

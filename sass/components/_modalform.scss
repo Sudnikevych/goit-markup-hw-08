@@ -1,7 +1,10 @@
 .modal-title {
-  @include font(700, 20px, 1.15, 0.03em, var(--main-text-color));
+  @include font(700, 20px, 1.5, 0.03em, var(--main-text-color));
   text-align: center;
   margin-bottom: 12px;
+  @include desktop {
+    @include font(700, 20px, 1.15, 0.03em, var(--main-text-color));
+  }
 }
 
 .modal-field {
@@ -96,7 +99,7 @@
 }
 
 .policy-text {
-  @include font(null, 14px, 1.71, 0.03em, var(--second-text-color));
+  @include font(null, 12px, 1.16, 0.03em, var(--second-text-color));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,10 +124,16 @@
       border-color: var(--accent-text-color);
     }
   }
+  @include desktop {
+    @include font(null, 14px, 1.71, 0.03em, var(--second-text-color));
+  }
 }
 
 .policy-link {
-  @include font(null, 14px, 1.71, 0.03em, var(--accent-text-color));
+  @include font(null, 12px, 1.16, 0.03em, var(--accent-text-color));
   text-decoration-line: underline;
   margin-left: 5px;
+  @include desktop {
+    @include font(null, 14px, 1.71, 0.03em, var(--accent-text-color));
+  }
 }

@@ -72,13 +72,77 @@
             >
           </li>
         </ul>
+        <!-- mobile menu btn-->
+        <button type="button" class="menu-open-btn">
+          <svg class="mobile-menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        <!-- mobile menu -->
+      </div>
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <div class="mobile-menu-top">
+            <button type="button" class="menu-close-btn">
+              <svg class="mobile-menu-icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link current link">Студия</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-menu-bottom">
+            <ul class="mobile-connect list">
+              <li class="mobile-connect__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-connect__tel nav__link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-connect__item">
+                <a
+                  href="mailto:info@devstudio"
+                  class="mobile-connect__link nav__link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-socials list">
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link link">Instargam</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link link">Twitter</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link link">Facebook</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link link">LinedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <!-- --------------------------------------Portfolio -->
+      <!-- Portfolio -->
       <section class="portfolio">
         <h1 class="visually-hidden">Портфолио</h1>
-        <!----------------------------------------- filter -->
+        <!-- filter -->
 
         <div class="container">
           <h2 class="visually-hidden">Фильтры</h2>
@@ -100,18 +164,42 @@
             </li>
           </ul>
 
-          <!--------------------------------------- projects -->
+          <!-- projects -->
 
           <h2 class="visually-hidden">Наши проекты</h2>
           <ul class="projects-list list">
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img-min.jpg"
-                    width="370"
-                    alt="Ноутбук с сайтом технокряк на экране"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-min.jpg         1x,
+                        ./images/project1@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-mob@1x-min.jpg 1x,
+                        ./images/project1-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-tab@1x-min.jpg 1x,
+                        ./images/project1-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/img-min.jpg"
+                      width="370"
+                      alt="Ноутбук с сайтом технокряк на экране"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -127,11 +215,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(1)-min.jpg"
-                    width="370"
-                    alt="два парня играют в баскетбол"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project2@1x-min.jpg 1x,
+                        ./images/project2@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-mob@1x-min.jpg 1x,
+                        ./images/project2-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-tab@1x-min.jpg 1x,
+                        ./images/project2-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project2@1x-min.jpg"
+                      width="370"
+                      alt="два парня играют в баскетбол"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -149,11 +261,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(2)-min.jpg"
-                    width="370"
-                    alt="логотип ресторана"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project3@x-min.jpg  1x,
+                        ./images/project3@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-mob@1x-min.jpg 1x,
+                        ./images/project3-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-tab@1x-min.jpg 1x,
+                        ./images/project3-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project3@x-min.jpg"
+                      width="370"
+                      alt="логотип ресторана"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -171,11 +307,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(3)-min.jpg"
-                    width="370"
-                    alt="Наушники"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project4@1x-min.jpg 1x,
+                        ./images/project4@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-mob@1x-min.jpg 1x,
+                        ./images/project4-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-tab@1x-min.jpg 1x,
+                        ./images/project4-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project4@1x-min.jpg"
+                      width="370"
+                      alt="Наушники"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -193,11 +353,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(4)-min.jpg"
-                    width="370"
-                    alt="две коробки. одна белая, другая деревянная"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project5@1x-min.jpg 1x,
+                        ./images/project5@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-mob@1x-min.jpg 1x,
+                        ./images/project5-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-tab@1x-min.jpg 1x,
+                        ./images/project5-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project5@1x-min.jpg"
+                      width="370"
+                      alt="две коробки. одна белая, другая деревянная"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -215,11 +399,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(5)-min.jpg"
-                    width="370"
-                    alt="Монитор с главной страницей веб-сайта"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project6@1x-min.jpg 1x,
+                        ./images/project6@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-mob@1x-min.jpg 1x,
+                        ./images/project6-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-tab@1x-min.jpg 1x,
+                        ./images/project6-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project6@1x-min.jpg"
+                      width="370"
+                      alt="Монитор с главной страницей веб-сайта"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -237,11 +445,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(6)-min.jpg"
-                    width="370"
-                    alt="Открытый журнал"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project7@1x-min.jpg 1x,
+                        ./images/project7@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-mob@1x-min.jpg 1x,
+                        ./images/project7-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-tab@1x-min.jpg 1x,
+                        ./images/project7-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project7@1x-min.jpg"
+                      width="370"
+                      alt="Открытый журнал"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -259,11 +491,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(7)-min.jpg"
-                    width="370"
-                    alt="Логотип на ярлыке"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project8@1x-min.jpg 1x,
+                        ./images/project8@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-mob@1x-min.jpg 1x,
+                        ./images/project8-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-tab@1x-min.jpg 1x,
+                        ./images/project8-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project8@1x-min.jpg"
+                      width="370"
+                      alt="Логотип на ярлыке"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -281,11 +537,35 @@
             <li class="projects-item">
               <a class="projects-link link" href="">
                 <div class="projects-image">
-                  <img
-                    src="./images/img(8)-min.jpg"
-                    width="370"
-                    alt="две руки на клавиатуре ноутбука"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project9@1x-min.jpg 1x,
+                        ./images/project9@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-mob@1x-min.jpg 1x,
+                        ./images/project9-mob@2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-tab@1x-min.jpg 1x,
+                        ./images/project9-tab@2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/project9@1x-min.jpg"
+                      width="370"
+                      alt="две руки на клавиатуре ноутбука"
+                    />
+                  </picture>
+
                   <p class="projects-top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -305,63 +585,68 @@
       </section>
     </main>
 
-    <!--footer-->
+    <!-- footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-contacts">
-          <a class="footer-logo link logo" href="/" lang="en"
-            ><span class="header-logo__color">Web</span>Studio</a
-          >
-          <address class="footer-address text">
-            <p class="footer-address-text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-address-list list">
-              <li class="footer-address-item">
-                <a
-                  href="mailto:info@devstudio"
-                  class="footer-address-email link"
-                  >info@devstudio</a
-                >
+        <div class="footer-container">
+          <div class="footer-contacts">
+            <a
+              class="footer-logo header__header-logo link logo"
+              href="/"
+              lang="en"
+              ><span class="header-logo__color">Web</span>Studio</a
+            >
+            <address class="footer-address text">
+              <p class="footer-address-text">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="footer-address-list list">
+                <li class="footer-address-item">
+                  <a
+                    href="mailto:info@devstudio"
+                    class="footer-address-email link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-address-item">
+                  <a href="tel:+380961111111" class="footer-address-tel link"
+                    >+380961111111</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-icons">
+            <h2 class="footer-text">Присоединяйтесь</h2>
+            <ul class="footer-social-list list">
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-address-item">
-                <a href="tel:+380961111111" class="footer-address-tel link"
-                  >+380961111111</a
-                >
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-icons">
-          <h2 class="footer-text">Присоединяйтесь</h2>
-          <ul class="footer-social-list list">
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="footer-form">
@@ -376,7 +661,7 @@
               autocomplete="on"
               id="footer-form-email"
             />
-            <button type="submit" class="footer-btn-sub">
+            <button type="submit" class="footer-btn-sub btn">
               Подписаться
               <svg class="footer-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-telegram"></use>
@@ -386,7 +671,8 @@
         </div>
       </div>
     </footer>
-    <!------------------------------------- scripts -->
+    <!-- scripts -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
