@@ -229,6 +229,12 @@ body {
     min-height: 580px;
   }
 }
+@media screen and (max-width: 470px) {
+  .modal {
+    width: 300px;
+    min-height: 400px;
+  }
+}
 
 .modal-close-btn {
   width: 30px;
