@@ -233,6 +233,7 @@ body {
   .modal {
     width: 300px;
     min-height: 400px;
+    overflow-y: auto;
   }
 }
 
