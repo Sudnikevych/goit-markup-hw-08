@@ -33,9 +33,14 @@
   }
 }
 
-.filter-item {
+.filter-item:not(:last-child) {
+  margin-right: 8px;
   margin-bottom: 15px;
-  &:not(:last-child) {
-    margin-right: 8px;
+  @include tablet {
+    margin-bottom: 0;
   }
+}
+
+.filter-item:nth-child(4) {
+  margin-bottom: 0;
 }

@@ -5,12 +5,19 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @include mobile {
+    .footer-container {
+      margin-bottom: 60px;
+    }
+  }
+
   @include tablet {
     max-width: 768px;
     .footer-container {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      margin-bottom: 60px;
     }
   }
   @include desktop {
@@ -26,9 +33,10 @@
 .footer-contacts {
   // border: 1px solid red;
   text-align: center;
+  margin-bottom: 60px;
   @include tablet {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 
   @include desktop {
@@ -79,13 +87,7 @@
 
 .footer-icons {
   // border: 1px solid red;
-  margin-top: 60px;
-  margin-bottom: 60px;
   text-align: center;
-  @include tablet {
-    margin-top: 0;
-    margin-bottom: 100px;
-  }
   @include desktop {
     margin-bottom: 35px;
   }
